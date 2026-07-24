@@ -19,6 +19,10 @@ The project relies on a three-table MySQL database structure:
 * **Advanced SQL**: Window Functions (`RANK()`), Common Table Expressions (`WITH`), and Control Flow (`CASE WHEN`).
 * **Core SQL**: Multi-table `INNER JOIN` and `LEFT JOIN` operations, Aggregate functions (`AVG`, `COUNT`, `SUM`), and Subqueries.
 * **Database Management**: Schema creation with Primary/Foreign Key constraints and transaction control (`START TRANSACTION`, `COMMIT`).
+  
+## 🚀 How to Use This Repository
+All database creation and analysis queries are located in the moneyball_analysis.sql file.
+The initial raw data was loaded from a master fifa dataset and normalized into the three-table schema using INSERT INTO ... SELECT statements.
 
 ## 💻 Featured Code Snippet
 To identify the most valuable player strictly within the context of their own club, I utilized a Window Function to partition the rankings:
@@ -33,7 +37,3 @@ SELECT
         ORDER BY market_value_eur DESC
     ) AS player_rank
 FROM players;
-
-How to Use This Repository
-All database creation and analysis queries are located in the moneyball_analysis.sql file.
-The initial raw data was loaded from a master fifa dataset and normalized into the three-table schema using INSERT INTO ... SELECT statements.
